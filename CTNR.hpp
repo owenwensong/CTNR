@@ -9,14 +9,14 @@
  *          To use, simply include this file and call CTNR::GetName. Examples: 
  * 
  *          clang++ and g++:
- *            GetName<void>()                   -> void
- *            GetName<classy*>()                -> classy
- *            GetName<structy<classy> const&>() -> structy<classy>
+ *            GetName<void>()            -> void
+ *            GetName<classy>()          -> classy
+ *            GetName<structy<classy>>() -> structy<classy>
  * 
  *          MSVC: 
- *            GetName<void>()                   -> void
- *            GetName<classy*>()                -> class classy
- *            GetName<structy<classy> const&>() -> struct structy<class classy>
+ *            GetName<void>()            -> void
+ *            GetName<classy>()          -> class classy
+ *            GetName<structy<classy>>() -> struct structy<class classy>
  *
  *          The return of GetName is a constexpr, allowing for other constexpr
  *          evaluations on the type name, eg: string hashing.
