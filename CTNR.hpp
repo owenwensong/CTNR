@@ -49,6 +49,9 @@
  * SOFTWARE.
 *******************************************************************************/
 
+#ifndef CTNR_HEADER_GUARD
+#define CTNR_HEADER_GUARD
+
 #if defined(__clang__) || defined(__GNUC__)
 #define CTNR_ATTRIB_FORCE_INLINE __attribute__((always_inline)) inline
 #elif defined(_MSC_VER)
@@ -146,3 +149,4 @@ namespace CTNR
 }
 
 #undef CTNR_ATTRIB_FORCE_INLINE
+#endif//CTNR_HEADER_GUARD
